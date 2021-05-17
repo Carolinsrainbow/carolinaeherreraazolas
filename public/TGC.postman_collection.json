@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "4ef92d2d-9dad-476a-99d1-0d136c853e5d",
+		"name": "TGC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"demo@thegrouplab.com\",\r\n    \"password\": \"demo\"\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDevices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDevice",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/device/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"device",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTechnologyTypes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/technology-types",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"technology-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDeviceTypes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/device-types",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"device-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storeDevice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identifier\": \"DeviceIdentifier123\",\r\n    \"mac\": \"DeviceMAC123\",\r\n    \"device_type_id\": 1,\r\n    \"technology_type_id\": 1,\r\n    \"alias\": \"Device123\",\r\n    \"scope\": 0,\r\n    \"has_gps\": false\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/device",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDevice",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"identifier\": \"DeviceIdentifier1234\",\r\n    \"mac\": \"DeviceMAC1234\",\r\n    \"device_type_id\": 2,\r\n    \"technology_type_id\": 2,\r\n    \"alias\": \"Device1234\",\r\n    \"scope\": 0,\r\n    \"has_gps\": false\r\n}"
+				},
+				"url": {
+					"raw": "{{host}}/api/device",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/device/9",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"device",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiY2FhMmYzMTY5YzBkMjI3MTFlNTAxY2Y2MjVlOGY1OWNkOTQ5ZmI2ZjhmNTU4MTJlODljZjk4YzE2NzBmYTJmYTAyMjAwZjhiZjA2NjdhNDAiLCJpYXQiOjE2MjAxMzUyNzEsIm5iZiI6MTYyMDEzNTI3MSwiZXhwIjoxNjUxNjcxMjcxLCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.idP7tDUQWK8oHL-SRbQJXbxuzooyUq7O8vYRvk0ubL4J8hy1xuUOmQI87ASr72nbTzZDxJ67qJziiXlXu3KRWIbNr7vxWJBURufSahoBEz-QVMCTP1aT-HglzAUwOM-n3qO0hp__VoneqhWUkUqG8pmW7vuXUYmT6qdMAeVjEpBFd26XtljbOTj3h8nFVNm7J1NWh-3W2Y5wbPPe4W_ew-tXrAk9ZUMuMGqHJBQiU3klPhJsj9EFWCRcPjD7fvHmYALBisQ1djOlpoo9dTt6BSoyWOX0I7LSI6bQ9MwBGqlPyhb31a2famYPMb5wQ0kgjSs1rfyKmGiqpkHtucA_1sCCUnNVkpfcikoBx5WV3_UNVDTrevs-tEd5z7gXjWUryde-LZA3DjrV5QPUCrWR-QwZD6IVcjPv_wOA89XSDHCGCvpozWpIcFKJW6eXdWsc_RIFV34RfSRWr9NMIQtlYyqLFesrFJ8nr5-3QMTYbmGH0xCJDBp6kEbyS5HrndJn_IiyJpyYl_1WFPHF_jljj6A5FFBsACxvTXj1sJUyVaRMM70phn0rGMJenHCYcXXbnXB1tDdd_HF4ZgJSWlM3eoPs-aguzpDTUWOE9zMj6jaTj8LTNgPlKLgQgZiwZNEVJDX_xwiALsQU0ouzuDPKk-CIjy68d9-DYT0hCP4aNp0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://demo.thegrouplab.com"
+		}
+	]
+}
